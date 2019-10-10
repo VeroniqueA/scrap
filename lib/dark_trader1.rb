@@ -10,9 +10,9 @@ page = Nokogiri::HTML(open("https://coinmarketcap.com/all/views/all/"))
 
 crypto_values = []
   
-page.xpath('//*[@id]/td[4]/a').each do |crypto_value|
+page.xpath('//*[@id]/td[5]/a').each do |crypto_value|
   
-crypto_values.push(crypto_value)
+crypto_values.push(crypto_value.text)
   
 end
 
